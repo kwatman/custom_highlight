@@ -1,0 +1,9 @@
+name: kwatl
+type: module
+description: 
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: CKEditor
+
+dependencies:
+  - drupal:codesnippet
