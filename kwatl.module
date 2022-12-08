@@ -22,4 +22,4 @@ function rorknlcodesnippet_form_filter_format_edit_form_alter(&$form, FormStateI
 
     asort($form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options'], SORT_STRING | SORT_FLAG_CASE);
   }
-}
+} ?>
