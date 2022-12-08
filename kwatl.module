@@ -20,23 +20,6 @@ function rorknlcodesnippet_form_filter_format_edit_form_alter(&$form, FormStateI
     $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['yaml'] = 'YAML';
     $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['lua'] = 'Lua';
 
-
-    unset($form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['coffeescript']);
-    unset($form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['cpp']);
-    unset($form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['cs']);
-    unset($form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['http']);
-    unset($form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['java']);
-    unset($form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['makefile']);
-    unset($form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['markdown']);
-    unset($form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['nginx']);
-    unset($form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['objectivec']);
-    unset($form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['python']);
-    unset($form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['ruby']);
-    unset($form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['sql']);
-    unset($form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['vbscript']);
-    unset($form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['xhtml']);
-    unset($form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['xml']);
-
     asort($form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options'], SORT_STRING | SORT_FLAG_CASE);
   }
 }
