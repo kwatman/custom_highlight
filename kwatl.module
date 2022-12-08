@@ -14,7 +14,7 @@ use Drupal\Core\Form\FormStateInterface;
  * @param FormStateInterface $form_state
  * @param $form_id
  */
-function rorknlcodesnippet_form_filter_format_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+function kwatl_form_filter_format_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if (isset($form['editor']['settings']['subform']['plugins']['codesnippet'])) {
     $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['plaintext'] = 'Plaintext';
     $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['yaml'] = 'YAML';
