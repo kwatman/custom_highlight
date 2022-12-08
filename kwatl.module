@@ -7,6 +7,10 @@
 
 use Drupal\Core\Form\FormStateInterface;
 
+
+function kwatl_ckeditor_plugin_info_alter(array &$plugins) {
+  $plugins['codesnippet']['class'] = 'Drupal\my_module\Plugin\CKEditorPlugin\MyModuleCodeSnippet';
+}
 /**
  * Implements hook_form_FORM_ID_alter().
  * Add extra languages for CodeSnippet 
@@ -21,5 +25,25 @@ function kwatl_form_filter_format_edit_form_alter(&$form, FormStateInterface $fo
     $form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options']['lua'] = 'Lua';
 
     asort($form['editor']['settings']['subform']['plugins']['codesnippet']['highlight_languages']['#options'], SORT_STRING | SORT_FLAG_CASE);
+  }
+
+  /**
+ * Implements hook_editor_js_settings_alter().
+ */
+function kwatl_editor_js_settings_alter(array &$settings) {
+  $languages =& $settings['editor']['formats']['full_html']['editorSettings']['codeSnippet_languages'];
+    if (isset($languages)) {
+      $languages = [
+        'css' => 'Css',
+        'javascript' => 'Javascript',
+        'json' => 'Json',
+        'php' => 'Php',
+        'scss' => 'Scss',
+        'twig' => 'Twig',
+        'plaintext' => 'Plaintext',
+        'xml' => 'HTML or Xml',
+        'lua' => 'lua'
+      ];
+    }
   }
 } ?>
