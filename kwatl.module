@@ -8,9 +8,6 @@
 use Drupal\Core\Form\FormStateInterface;
 
 
-function kwatl_ckeditor_plugin_info_alter(array &$plugins) {
-  $plugins['codesnippet']['class'] = 'Drupal\my_module\Plugin\CKEditorPlugin\MyModuleCodeSnippet';
-}
 /**
  * Implements hook_form_FORM_ID_alter().
  * Add extra languages for CodeSnippet 
